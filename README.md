@@ -30,3 +30,10 @@ The choice: **only the trailing `[]` notation creates arrays.** A repeated plain
 - **`+` decodes to a space only in values**, not in keys. Keys are left byte-for-byte (after percent-decoding) so a hand-authored key like `a+b` stays `a+b`.
 
 Run the tests with `node --test test/`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
