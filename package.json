@@ -1,6 +1,6 @@
 {
   "name": "url-query-string-parser",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Parses query strings with duplicate keys, bracket notation for arrays, and nested object support.",
   "type": "module",
   "main": "src/index.js",
